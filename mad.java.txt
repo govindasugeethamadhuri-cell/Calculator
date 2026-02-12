@@ -1,0 +1,39 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+import java.lang.Math;
+class SimCalci
+{
+public static void main(String args[])
+{
+double num1,num2;
+char operator;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter first number:");
+num1=sc.nextDouble();
+System.out.println("Enter second number:");
+num2=sc.nextDouble();
+System.out.println("Enter the operator(+,-,*,/) :");
+operator=sc.next().charAt(0);
+double result=0;
+switch(operator)
+{
+case'+':
+result=num1+num2;
+break;
+case'-':
+result=num1-num2;
+break;
+case'*':
+result=num1*num2;
+break;
+case'/':
+result=num1/num2;
+break;
+default:
+System.out.println("Invalid Operator!");
+break;
+}
+System.out.println(num1 + " " + operator + " " + num2 + "=" +result);
+}
+}
